@@ -18,22 +18,22 @@ db = SqliteDatabase(args.db)
 log = logging.getLogger(__name__)
 
 var pkmnraresness = {
-"1":{"rareness":7},
-"2":{"rareness":8},
-"3":{"rareness":9},
-"4":{"rareness":7},
-"5":{"rareness":8},
-"6":{"rareness":9},
-"7":{"rareness":5},
-"8":{"rareness":8},
-"9":{"rareness":9},
-"10":{"rareness":2},
-"11":{"rareness":4},
-"12":{"rareness":7},
-"13":{"rareness":2},
-"14":{"rareness":4},
-"15":{"rareness":7},
-"16":{"rareness":1},
+"1": {"rareness":7},
+"2": {"rareness":8},
+"3": {"rareness":9},
+"4": {"rareness":7},
+"5": {"rareness":8},
+"6": {"rareness":9},
+"7": {"rareness":5},
+"8": {"rareness":8},
+"9": {"rareness":9},
+"10": {"rareness":2},
+"11": {"rareness":4},
+"12": {"rareness":7},
+"13": {"rareness":2},
+"14": {"rareness":4},
+"15": {"rareness":7},
+"16": {"rareness":1},
 "17":{"rareness":4},
 "18":{"rareness":7},
 "19":{"rareness":1},
@@ -274,7 +274,7 @@ def parse_map(map_dict, iteration_num, step, step_location):
                 'encounter_id': b64encode(str(p['encounter_id'])),
                 'spawnpoint_id': p['spawnpoint_id'],
                 'pokemon_id': p['pokemon_data']['pokemon_id'],
-        	var EntfernungNordSued = (0.0592 * ( random.random() * ((pkmnraresness[p.id].rareness * pkmnraresness[p.id].rareness * 100) / 16) ) + 0.0038 )/ 1000
+                var EntfernungNordSued = (0.0592 * ( random.random() * ((pkmnraresness[p.id].rareness * pkmnraresness[p.id].rareness * 100) / 16) ) + 0.0038 )/ 1000
                 var EntfernungOstWest  = (0.0142 * ( random.random() * ((pkmnraresness[p.id].rareness * pkmnraresness[p.id].rareness * 100) / 16) ) + 0.0073 )/ 1000
 		var LocationNordSued = (DirectionNordSued * EntfernungNordSued) + p['latitude']
 		var LocationOstWest = (DirectionOstWest * EntfernungOstWest) + p['longitude']
