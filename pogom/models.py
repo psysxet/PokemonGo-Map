@@ -17,7 +17,7 @@ args = get_args()
 db = SqliteDatabase(args.db)
 log = logging.getLogger(__name__)
 
-pkmnraresness = {
+var pkmnraresness = {
 "1":{"rareness":7},
 "2":{"rareness":8},
 "3":{"rareness":9},
@@ -274,10 +274,10 @@ def parse_map(map_dict, iteration_num, step, step_location):
                 'encounter_id': b64encode(str(p['encounter_id'])),
                 'spawnpoint_id': p['spawnpoint_id'],
                 'pokemon_id': p['pokemon_data']['pokemon_id'],
-                EntfernungNordSued = (0.0592 * ( random.random() * ((pkmnraresness[p.id].rareness * pkmnraresness[p.id].rareness * 100) / 16) ) + 0.0038 )/ 1000
-                EntfernungOstWest  = (0.0142 * ( random.random() * ((pkmnraresness[p.id].rareness * pkmnraresness[p.id].rareness * 100) / 16) ) + 0.0073 )/ 1000
-			          LocationNordSued = (DirectionNordSued * EntfernungNordSued) + p['latitude']
-		            LocationOstWest = (DirectionOstWest * EntfernungOstWest) + p['longitude']
+        	var EntfernungNordSued = (0.0592 * ( random.random() * ((pkmnraresness[p.id].rareness * pkmnraresness[p.id].rareness * 100) / 16) ) + 0.0038 )/ 1000
+                var EntfernungOstWest  = (0.0142 * ( random.random() * ((pkmnraresness[p.id].rareness * pkmnraresness[p.id].rareness * 100) / 16) ) + 0.0073 )/ 1000
+		var LocationNordSued = (DirectionNordSued * EntfernungNordSued) + p['latitude']
+		var LocationOstWest = (DirectionOstWest * EntfernungOstWest) + p['longitude']
                 'latitude': LocationNordSued,
                 'longitude': LocationOstWest,
                 'disappear_time': d_t
